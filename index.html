@@ -4,10 +4,64 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="flex-col gap-10">
+      <h1 class="font-bold text-6xl">SplineViewer Demo</h1>
+      <div class="w-200 flex-col gap-3">
+        <h1>Embedding 置入</h1>
+        <p>Copy and paste the script tags into the body of your site (or inside an HTML embed). That’s it!</p>
+        <p>将脚本标记复制并粘贴到网站的正文中（或嵌入HTML中）。就是这样！</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/UWoeqiir20o49Dah/scene.splinecode"></spline-viewer>
+        </div>
+      </div>
+      <div class="w-200 flex-col gap-3">
+        <h1>Scroll 滚动</h1>
+        <p>Create Scroll events and camera states to create scroll-based transitions.</p>
+        <p>创建滚动事件和相机状态以创建基于滚动的转换。</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"></spline-viewer>
+        </div>
+      </div>
+      <div class="w-200 flex-col gap-3">
+        <h1>Orbit & Zoom 轨道&缩放</h1>
+        <p>Control the camera behavior from the Spline export settings.</p>
+        <p>从“样条线”导出设置控制摄影机行为。</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/U9O6K7fXziMEU7Wu/scene.splinecode"></spline-viewer>
+        </div>
+      </div>
+      <div class="w-200 flex-col gap-3">
+        <h1>Follow 跟随</h1>
+        <p>Make your objects follow the cursor or other objects by using the Follow event.</p>
+        <p>使用跟随事件使您的对象跟随光标或其他对象。</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/PBQQBw8bfXDhBo7w/scene.splinecode" events-target="global"></spline-viewer>
+        </div>
+      </div>
+      <div class="w-200 flex-col gap-3">
+        <h1>Look At 面向</h1>
+        <p>You can make your objects look at the camera, the cursor, or other objects with Look At event.</p>
+        <p>您可以使用look At事件使您的对象看向相机、光标或其他对象。</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode" events-target="global"></spline-viewer>
+        </div>
+      </div>
+      <div class="w-200 flex-col gap-3">
+        <h1>Change Background 更改背景颜色</h1>
+        <p>Override the background color of your Spline scene by using the background property that accepts any css style color. This color will override the background color you defined in the editor.</p>
+        <p>使用接受任何css样式颜色的background属性覆盖样条场景的背景颜色。此颜色将覆盖您在编辑器中定义的背景颜色。</p>
+        <div class="w-200 h-100 bg-black/5 rounded-xl">
+          <spline-viewer url="https://prod.spline.design/fJ2ptJKzT-sDkpfO/scene.splinecode" background="rgba(218,81,221,0.2)"></spline-viewer>
+        </div>
+      </div>
+      <div>
+        <a href="https://viewer.spline.design/" target="_blank" rel="noopener noreferrer">文档地址：https://viewer.spline.design/</a>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
