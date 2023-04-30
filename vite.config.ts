@@ -1,7 +1,8 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+
 export default defineConfig(() => {
   return {
     plugins: [
@@ -31,6 +32,7 @@ export default defineConfig(() => {
         },
       },
     },
+    base: './',
     build: {
       minify: 'esbuild',
       brotliSize: false,
